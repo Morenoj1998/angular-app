@@ -11,5 +11,10 @@ export class ContactComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  ngAfterViewInit() {
+    performance.mark('mark_fully_loaded');
+  } 
+  ngAfterViewChecked(){
+    performance.mark('mark_fully_visible');
+  }
 }
